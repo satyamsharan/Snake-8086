@@ -1,6 +1,6 @@
-; snake game
-; assembly 8086
-; written by Leonardo Ono (ono.leo@gmail.com)
+; Snake Game
+; Assembly 8086
+; Written by Satyam Sharan (satyam.sharan@gmail.com), eonardo Ono (ono.leo@gmail.com)
 ;
 ; target OS: DOS (.COM file extension)
 ; use: nasm snake.asm -o snake.com -f bin
@@ -154,9 +154,12 @@ section .text
 			jl .next
 			mov si, .text_1
 			mov di, 1626
+			;call buffer_print_string
+			;mov si, .text_2
+			;mov di, 1781
 			call buffer_print_string
-			mov si, .text_2
-			mov di, 1781
+			mov si, .text_5
+			mov di, 1776
 			call buffer_print_string
 			call clear_keyboard_buffer
 		.wait_for_key:
@@ -198,13 +201,15 @@ section .text
 			dw 0855, 0935, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022
 			dw 0696, 0697, 0698, 0699, 0700, 0701, 0702
 		.text_1:
-			db "DEVELOPED BY O.L. (C) 2017", 0
+			db "Developped by Satyam Sharan", 0
 		.text_2:
 			db "WRITTEN IN ASSEMBLY 8086 LANGUAGE :)", 0
 		.text_3:
 			db "PRESS ANY KEY TO START", 0
 		.text_4:
 			db "                      ", 0
+		.text_5:
+			db "For PEE111: Microprocessor based System Design", 0
 
 	print_score:
 			mov si, .text
