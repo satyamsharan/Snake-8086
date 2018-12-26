@@ -5,5 +5,9 @@
 
 Simple Snake game written in assembly 8086 for Dosbox
 
-To compile: 
+To compile:
+
 nasm snake.asm -o snake.com -f bin
+
+
+For PEE111: Microprocessor based System Design
